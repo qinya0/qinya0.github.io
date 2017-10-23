@@ -79,12 +79,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="build private docker-registrybuild container for registry123456789101112# a file for registrymkdir /home/qy/registry# the file(/var/lib/registry) is images_save_filedocker run -d -ti --restart always">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker-registry">
+<meta property="og:url" content="http://yoursite.com/2017/10/23/docker-registry/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="build private docker-registrybuild container for registry123456789101112# a file for registrymkdir /home/qy/registry# the file(/var/lib/registry) is images_save_filedocker run -d -ti --restart always">
+<meta property="og:updated_time" content="2017-10-23T15:05:06.170Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="docker-registry">
+<meta name="twitter:description" content="build private docker-registrybuild container for registry123456789101112# a file for registrymkdir /home/qy/registry# the file(/var/lib/registry) is images_save_filedocker run -d -ti --restart always">
 
 
 
@@ -114,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/23/docker-registry/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>docker-registry | Hexo</title>
   
 
 
@@ -139,8 +143,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -213,9 +216,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -245,9 +248,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/23/docker-registry/" itemprop="url">docker-registry</a></h1>
+          <h1 class="post-title" itemprop="name headline">docker-registry</h1>
         
 
         <div class="post-meta">
@@ -297,14 +298,10 @@
       
 
       
-        
-          
-            <h1 id="build-private-docker-registry"><a href="#build-private-docker-registry" class="headerlink" title="build private docker-registry"></a>build private docker-registry</h1><h2 id="build-container-for-registry"><a href="#build-container-for-registry" class="headerlink" title="build container for registry"></a>build container for registry</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># a file for registry</span></div><div class="line">mkdir /home/qy/registry</div><div class="line"><span class="comment"># the file(/var/lib/registry) is images_save_file</span></div><div class="line">docker run -d -ti --restart always -v /home/qy/registry:/var/lib/registry \</div><div class="line">-v /etc/localtime:/etc/localtime:ro -p 5000:5000 --name qy-registry registry:2</div><div class="line"></div><div class="line"><span class="comment"># test the container</span></div><div class="line">docker pull hello-world</div><div class="line">docker tag hello-world localhost:5000/hello-world</div><div class="line">docker push localhost:5000/hello-world</div><div class="line">docker rmi localhost:5000/hello-world</div><div class="line">docker pull localhost:5000/hello-world</div></pre></td></tr></table></figure>
+        <h1 id="build-private-docker-registry"><a href="#build-private-docker-registry" class="headerlink" title="build private docker-registry"></a>build private docker-registry</h1><h2 id="build-container-for-registry"><a href="#build-container-for-registry" class="headerlink" title="build container for registry"></a>build container for registry</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># a file for registry</span></div><div class="line">mkdir /home/qy/registry</div><div class="line"><span class="comment"># the file(/var/lib/registry) is images_save_file</span></div><div class="line">docker run -d -ti --restart always -v /home/qy/registry:/var/lib/registry \</div><div class="line">-v /etc/localtime:/etc/localtime:ro -p 5000:5000 --name qy-registry registry:2</div><div class="line"></div><div class="line"><span class="comment"># test the container</span></div><div class="line">docker pull hello-world</div><div class="line">docker tag hello-world localhost:5000/hello-world</div><div class="line">docker push localhost:5000/hello-world</div><div class="line">docker rmi localhost:5000/hello-world</div><div class="line">docker pull localhost:5000/hello-world</div></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># config docker-insecure-registry</span></div><div class="line">sudo vim /etc/default/docker</div><div class="line"><span class="comment"># set the ip:port to config:</span></div><div class="line">DOCKER_OPTS=<span class="string">"--insecure-registry 10.0.2.15:5000"</span></div><div class="line"><span class="comment"># if you config the proxy for docker(export http_proxy="xxxxxxxx")</span></div><div class="line"><span class="comment"># you should set that: export no_proxy="127.0.0.1,10.0.2.15:5000"</span></div><div class="line"><span class="comment"># finally restart docker</span></div><div class="line">sudo sertvice docker restart</div><div class="line"></div><div class="line"><span class="comment"># check the config</span></div><div class="line">sudo docker pull hello-world</div><div class="line">sudo docker tag hello-world 10.0.2.15:5000/hello-world</div><div class="line">sudo docker push 10.0.2.15:5000/hello-world</div><div class="line">sudo docker rmi 10.0.2.15:5000/hello-world</div><div class="line">sudo docker pull 10.0.2.15:5000/hello-world</div></pre></td></tr></table></figure>
 <h2 id="search-images-in-registry"><a href="#search-images-in-registry" class="headerlink" title="search images in registry"></a>search images in registry</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># search all imagers</span></div><div class="line">curl -X GET http://10.0.2.15:5000/v2/_catalog</div><div class="line"><span class="comment"># search all tags of image</span></div><div class="line">curl -X GET http://10.0.2.15:5000/v2/hello-world/tags/list</div></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
     
@@ -321,136 +318,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/23/install-docker/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="qinya0">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/23/install-docker/" itemprop="url">install_docker</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-23T22:56:33+08:00">
-                2017-10-23
-              </time>
+              <a href="/2017/10/23/install-docker/" rel="next" title="install_docker">
+                <i class="fa fa-chevron-left"></i> install_docker
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="install-docker-in-ubuntu"><a href="#install-docker-in-ubuntu" class="headerlink" title="install docker in ubuntu"></a>install docker in ubuntu</h1><ul>
-<li>ubuntu16.04 server</li>
-<li>docker 1.13.0 (the new is 17.0 ce)</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># update</span></div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install -y apt-transport-https ca-certificates</div><div class="line">   </div><div class="line"> <span class="comment"># ready for docker</span></div><div class="line">sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609</div><div class="line">sudo rm -rf /etc/apt/sources.list.d/dokcer.list</div><div class="line">sudo touch /etc/apt/sources.list.d/docker.list</div><div class="line">sudo chmod 777 /etc/apt/sources.list.d/docker.list</div><div class="line">sudo <span class="built_in">echo</span> <span class="string">"deb https://apt.dockerproject.org/repo ubuntu-trusty main"</span> &gt; /etc/apt/sources.list.d/docker.list</div><div class="line"></div><div class="line">sudo apt-get update</div><div class="line"></div><div class="line"><span class="comment"># delete the old version</span></div><div class="line">sudo apt-get purge lxc-docker</div><div class="line">sudo apt-get remove docker-engine</div><div class="line"></div><div class="line"><span class="comment"># search all version of docker-engine</span></div><div class="line">sudo apt-cache policy docker-engine</div><div class="line"></div><div class="line"><span class="comment"># instal docker(you can install the other version for your system)</span></div><div class="line">sudo apt-get install -y docker-engine=1.13.0-0~ubuntu-trusty</div><div class="line"></div><div class="line"><span class="comment"># delete useless package</span></div><div class="line">sudo rm -rf /var/lib/apt/lists/*</div><div class="line"></div><div class="line"><span class="comment"># check docker</span></div><div class="line">sudo docker version</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -460,252 +349,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/22/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="qinya0">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/22/hello-world/" itemprop="url">hello-world</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-22T23:05:26+08:00">
-                2017-10-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><ul>
-<li><a href="www.baidu.com">baidu</a></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">whoami</div></pre></td></tr></table></figure>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/22/test-hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="qinya0">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/22/test-hexo/" itemprop="url">test hexo</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-22T22:35:44+08:00">
-                2017-10-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="test-hexo"><a href="#test-hexo" class="headerlink" title="test hexo"></a>test hexo</h1>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -713,6 +361,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -733,8 +385,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -787,6 +448,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#build-private-docker-registry"><span class="nav-number">1.</span> <span class="nav-text">build private docker-registry</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#build-container-for-registry"><span class="nav-number">1.1.</span> <span class="nav-text">build container for registry</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#search-images-in-registry"><span class="nav-number">1.2.</span> <span class="nav-text">search images in registry</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -920,6 +597,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
