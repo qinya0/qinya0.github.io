@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="qy 的博客">
 <meta property="og:description" content="ubuntu install docker-engine">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-24T14:41:15.139Z">
+<meta property="og:updated_time" content="2017-10-25T12:31:01.040Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="install_docker">
 <meta name="twitter:description" content="ubuntu install docker-engine">
@@ -326,10 +326,10 @@
       
 
       
-        <h1 id="install-docker-in-ubuntu"><a href="#install-docker-in-ubuntu" class="headerlink" title="install docker in ubuntu"></a>install docker in ubuntu</h1><ul>
-<li>ubuntu16.04 server</li>
-<li>docker 1.13.0 (the new is 17.0 ce)</li>
-</ul>
+        <h1 id="install-docker-in-ubuntu"><a href="#install-docker-in-ubuntu" class="headerlink" title="install docker in ubuntu"></a>install docker in ubuntu</h1><hr>
+<blockquote>
+<p>ubuntu16.04 server<br>docker 1.13.0 (the new is 17.0 ce)</p>
+</blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># update</span></div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install -y apt-transport-https ca-certificates</div><div class="line">   </div><div class="line"> <span class="comment"># ready for docker</span></div><div class="line">sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609</div><div class="line">sudo rm -rf /etc/apt/sources.list.d/dokcer.list</div><div class="line">sudo touch /etc/apt/sources.list.d/docker.list</div><div class="line">sudo chmod 777 /etc/apt/sources.list.d/docker.list</div><div class="line">sudo <span class="built_in">echo</span> <span class="string">"deb https://apt.dockerproject.org/repo ubuntu-trusty main"</span> &gt; /etc/apt/sources.list.d/docker.list</div><div class="line"></div><div class="line">sudo apt-get update</div><div class="line"></div><div class="line"><span class="comment"># delete the old version</span></div><div class="line">sudo apt-get purge lxc-docker</div><div class="line">sudo apt-get remove docker-engine</div><div class="line"></div><div class="line"><span class="comment"># search all version of docker-engine</span></div><div class="line">sudo apt-cache policy docker-engine</div><div class="line"></div><div class="line"><span class="comment"># instal docker(you can install the other version for your system)</span></div><div class="line">sudo apt-get install -y docker-engine=1.13.0-0~ubuntu-trusty</div><div class="line"></div><div class="line"><span class="comment"># delete useless package</span></div><div class="line">sudo rm -rf /var/lib/apt/lists/*</div><div class="line"></div><div class="line"><span class="comment"># check docker</span></div><div class="line">sudo docker version</div></pre></td></tr></table></figure>
 
       
@@ -452,7 +452,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
