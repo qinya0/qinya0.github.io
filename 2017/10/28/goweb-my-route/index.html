@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="docker,ubuntu," />
+  <meta name="keywords" content="go," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="ubuntu install docker-engine">
-<meta name="keywords" content="docker,ubuntu">
+<meta name="description" content="create my route for http&apos;s handlerfunc">
+<meta name="keywords" content="go">
 <meta property="og:type" content="article">
-<meta property="og:title" content="install_docker">
-<meta property="og:url" content="http://yoursite.com/2017/10/23/install-docker/index.html">
+<meta property="og:title" content="goweb_my-route">
+<meta property="og:url" content="http://yoursite.com/2017/10/28/goweb-my-route/index.html">
 <meta property="og:site_name" content="qy 的博客">
-<meta property="og:description" content="ubuntu install docker-engine">
+<meta property="og:description" content="create my route for http&apos;s handlerfunc">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-25T12:31:01.040Z">
+<meta property="og:updated_time" content="2017-10-28T14:52:39.177Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="install_docker">
-<meta name="twitter:description" content="ubuntu install docker-engine">
+<meta name="twitter:title" content="goweb_my-route">
+<meta name="twitter:description" content="create my route for http&apos;s handlerfunc">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/23/install-docker/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/28/goweb-my-route/"/>
 
 
 
 
 
-  <title>install_docker | qy 的博客</title>
+  <title>goweb_my-route | qy 的博客</title>
   
 
 
@@ -233,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/23/install-docker/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/28/goweb-my-route/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="qinya0">
@@ -250,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">install_docker</h1>
+          <h1 class="post-title" itemprop="name headline">goweb_my-route</h1>
         
 
         <div class="post-meta">
@@ -262,8 +262,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-23T22:56:33+08:00">
-                2017-10-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-28T22:12:09+08:00">
+                2017-10-28
               </time>
             
 
@@ -285,8 +285,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/docker/" itemprop="url" rel="index">
-                    <span itemprop="name">docker</span>
+                  <a href="/categories/goweb/" itemprop="url" rel="index">
+                    <span itemprop="name">goweb</span>
                   </a>
                 </span>
 
@@ -309,7 +309,7 @@
 
           
               <div class="post-description">
-                  ubuntu install docker-engine
+                  create my route for http's handlerfunc
               </div>
           
 
@@ -326,11 +326,7 @@
       
 
       
-        <h1 id="install-docker-in-ubuntu"><a href="#install-docker-in-ubuntu" class="headerlink" title="install docker in ubuntu"></a>install docker in ubuntu</h1><hr>
-<blockquote>
-<p>ubuntu16.04 server<br>docker 1.13.0 (the new is 17.0 ce)</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># update</span></div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install -y apt-transport-https ca-certificates</div><div class="line">   </div><div class="line"> <span class="comment"># ready for docker</span></div><div class="line">sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609</div><div class="line">sudo rm -rf /etc/apt/sources.list.d/dokcer.list</div><div class="line">sudo touch /etc/apt/sources.list.d/docker.list</div><div class="line">sudo chmod 777 /etc/apt/sources.list.d/docker.list</div><div class="line">sudo <span class="built_in">echo</span> <span class="string">"deb https://apt.dockerproject.org/repo ubuntu-trusty main"</span> &gt; /etc/apt/sources.list.d/docker.list</div><div class="line"></div><div class="line">sudo apt-get update</div><div class="line"></div><div class="line"><span class="comment"># delete the old version</span></div><div class="line">sudo apt-get purge lxc-docker</div><div class="line">sudo apt-get remove docker-engine</div><div class="line"></div><div class="line"><span class="comment"># search all version of docker-engine</span></div><div class="line">sudo apt-cache policy docker-engine</div><div class="line"></div><div class="line"><span class="comment"># instal docker(you can install the other version for your system)</span></div><div class="line">sudo apt-get install -y docker-engine=1.13.0-0~ubuntu-trusty</div><div class="line"></div><div class="line"><span class="comment"># delete useless package</span></div><div class="line">sudo rm -rf /var/lib/apt/lists/*</div><div class="line"></div><div class="line"><span class="comment"># check docker</span></div><div class="line">sudo docker version</div></pre></td></tr></table></figure>
+        <h1 id="my-route"><a href="#my-route" class="headerlink" title="my-route"></a>my-route</h1><h2 id="code"><a href="#code" class="headerlink" title="code"></a>code</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> main</div><div class="line"></div><div class="line"><span class="keyword">import</span> (</div><div class="line">	<span class="string">"fmt"</span></div><div class="line">	<span class="string">"net/http"</span></div><div class="line">)</div><div class="line"></div><div class="line"><span class="comment">// new struct</span></div><div class="line"><span class="keyword">type</span> MyMux <span class="keyword">struct</span> &#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * interface :</span></div><div class="line"><span class="comment"> * type Handler interface &#123;</span></div><div class="line"><span class="comment"> *	ServeHTTP(ResponseWriter, *Request) </span></div><div class="line"><span class="comment"> * &#125;</span></div><div class="line"><span class="comment"> * HandlerFunc use this interface:</span></div><div class="line"><span class="comment"> * func (f HandlerFunc) ServeHTTP(w ResponseWriter, r *Request) &#123;</span></div><div class="line"><span class="comment"> *	f(w, r)</span></div><div class="line"><span class="comment"> * &#125;</span></div><div class="line"><span class="comment"> *</span></div><div class="line"><span class="comment"> */</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="params">(p *MyMux)</span> <span class="title">ServeHTTP</span><span class="params">(w http.ResponseWriter, r *http.Request)</span></span> &#123;</div><div class="line">	<span class="keyword">if</span> r.URL.Path == <span class="string">"/"</span> &#123;</div><div class="line">		sayhelloName(w, r)</div><div class="line">		<span class="keyword">return</span></div><div class="line">	&#125;</div><div class="line">	http.NotFound(w, r)</div><div class="line">	<span class="keyword">return</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// HandlerFunc</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">sayhelloName</span><span class="params">(w http.ResponseWriter, r *http.Request)</span></span> &#123;</div><div class="line">	fmt.Fprintf(w, <span class="string">"Hello qinya's route!"</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</div><div class="line">	mux := &amp;MyMux&#123;&#125;</div><div class="line">	http.ListenAndServe(<span class="string">":9000"</span>, mux)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -348,9 +344,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/docker/" rel="tag"># docker</a>
-          
-            <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
+            <a href="/tags/go/" rel="tag"># go</a>
           
         </div>
       
@@ -363,8 +357,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/22/hello-world/" rel="next" title="hello-world">
-                <i class="fa fa-chevron-left"></i> hello-world
+              <a href="/2017/10/28/goweb-hello-world/" rel="next" title="goweb_hello-world">
+                <i class="fa fa-chevron-left"></i> goweb_hello-world
               </a>
             
           </div>
@@ -372,10 +366,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/23/docker-registry/" rel="prev" title="docker-registry">
-                docker-registry <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -509,7 +499,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#install-docker-in-ubuntu"><span class="nav-number">1.</span> <span class="nav-text">install docker in ubuntu</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#my-route"><span class="nav-number">1.</span> <span class="nav-text">my-route</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#code"><span class="nav-number">1.1.</span> <span class="nav-text">code</span></a></li></ol></li></ol></div>
             
 
           </div>
