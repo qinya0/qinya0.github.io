@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="test," />
+  <meta name="keywords" content="go," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="1 baidu  1whoami">
-<meta name="keywords" content="test">
+<meta name="description" content="the hello-world for go-web">
+<meta name="keywords" content="go">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hello-world">
-<meta property="og:url" content="http://yoursite.com/2017/10/22/hello-world/index.html">
+<meta property="og:title" content="goweb_hello-world">
+<meta property="og:url" content="http://yoursite.com/2017/10/28/goweb-hello-world/index.html">
 <meta property="og:site_name" content="qy 的博客">
-<meta property="og:description" content="1 baidu  1whoami">
+<meta property="og:description" content="the hello-world for go-web">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-24T14:41:40.599Z">
+<meta property="og:updated_time" content="2017-10-28T14:07:26.293Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hello-world">
-<meta name="twitter:description" content="1 baidu  1whoami">
+<meta name="twitter:title" content="goweb_hello-world">
+<meta name="twitter:description" content="the hello-world for go-web">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/22/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/28/goweb-hello-world/"/>
 
 
 
 
 
-  <title>hello-world | qy 的博客</title>
+  <title>goweb_hello-world | qy 的博客</title>
   
 
 
@@ -233,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/22/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/28/goweb-hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="qinya0">
@@ -250,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hello-world</h1>
+          <h1 class="post-title" itemprop="name headline">goweb_hello-world</h1>
         
 
         <div class="post-meta">
@@ -262,8 +262,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-22T23:05:26+08:00">
-                2017-10-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-28T21:56:14+08:00">
+                2017-10-28
               </time>
             
 
@@ -285,8 +285,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/test/" itemprop="url" rel="index">
-                    <span itemprop="name">test</span>
+                  <a href="/categories/goweb/" itemprop="url" rel="index">
+                    <span itemprop="name">goweb</span>
                   </a>
                 </span>
 
@@ -308,6 +308,10 @@
           
 
           
+              <div class="post-description">
+                  the hello-world for go-web
+              </div>
+          
 
         </div>
       </header>
@@ -322,10 +326,10 @@
       
 
       
-        <h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><ul>
-<li><a href="www.baidu.com">baidu</a></li>
+        <h1 id="hello-world"><a href="#hello-world" class="headerlink" title="hello-world"></a>hello-world</h1><ul>
+<li>go version go1.8.4 linux/amd64</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">whoami</div></pre></td></tr></table></figure>
+<h2 id="code"><a href="#code" class="headerlink" title="code"></a>code</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> main</div><div class="line"></div><div class="line"><span class="keyword">import</span> (</div><div class="line">	<span class="string">"fmt"</span></div><div class="line">	<span class="string">"log"</span></div><div class="line">	<span class="string">"net/http"</span></div><div class="line">	<span class="string">"strings"</span></div><div class="line">)</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * http的httpHandleFunc函数</span></div><div class="line"><span class="comment"> * 实现: type HandlerFunc func(ResponseWriter, *Request)</span></div><div class="line"><span class="comment"> */</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">sayHelloWorld</span><span class="params">(w http.ResponseWriter, r *http.Request)</span></span> &#123;</div><div class="line">	<span class="comment">// 解析参数，</span></div><div class="line">	r.ParseForm()</div><div class="line">	<span class="comment">// 打印各参数</span></div><div class="line">	fmt.Println(r.Form)</div><div class="line">	fmt.Println(<span class="string">"path"</span>, r.URL.Path)</div><div class="line">	fmt.Println(<span class="string">"scheme"</span>, r.URL.Scheme)</div><div class="line">	fmt.Println(r.Form[<span class="string">"url_long"</span>])</div><div class="line">	<span class="keyword">for</span> k, v := <span class="keyword">range</span> r.Form &#123;</div><div class="line">		fmt.Println(<span class="string">"key:"</span>, k)</div><div class="line">		fmt.Println(<span class="string">"val:"</span>, strings.Join(v, <span class="string">""</span>))</div><div class="line">	&#125;</div><div class="line">	<span class="comment">// 返回数据"Hello qinya0"</span></div><div class="line">	fmt.Fprintf(w, <span class="string">"Hello qinya0!"</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</div><div class="line">	<span class="comment">// set handle func for "/"</span></div><div class="line">	http.HandleFunc(<span class="string">"/"</span>, sayHelloWorld)</div><div class="line">	<span class="comment">// start listen port 9000</span></div><div class="line">	err := http.ListenAndServe(<span class="string">":9000"</span>, <span class="literal">nil</span>)</div><div class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</div><div class="line">		log.Fatal(<span class="string">"ListenAndServe: "</span>, err)</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -343,7 +347,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/test/" rel="tag"># test</a>
+            <a href="/tags/go/" rel="tag"># go</a>
           
         </div>
       
@@ -356,8 +360,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/22/test-hexo/" rel="next" title="test hexo">
-                <i class="fa fa-chevron-left"></i> test hexo
+              <a href="/2017/10/25/docker-jenkins/" rel="next" title="docker-jenkins">
+                <i class="fa fa-chevron-left"></i> docker-jenkins
               </a>
             
           </div>
@@ -365,10 +369,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/23/install-docker/" rel="prev" title="install_docker">
-                install_docker <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -502,7 +502,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1"><span class="nav-number">1.</span> <span class="nav-text">1</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hello-world"><span class="nav-number">1.</span> <span class="nav-text">hello-world</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#code"><span class="nav-number">1.1.</span> <span class="nav-text">code</span></a></li></ol></li></ol></div>
             
 
           </div>
