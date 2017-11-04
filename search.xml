@@ -71,20 +71,20 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[hello-world]]></title>
-    <url>%2F2017%2F10%2F22%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[1 baidu 1whoami]]></content>
+    <title><![CDATA[use hexo]]></title>
+    <url>%2F2017%2F10%2F22%2Fuse-hexo%2F</url>
+    <content type="text"><![CDATA[hexo and githubinstall software install hexo 123456789101112131415161718192021222324# gitsudo apt-get updatesudo apt-get install -y gitsudo apt-get# nodesudo apt-get install -y python-software-properties software-properties-commonsudo add-apt-repository ppa:chris-lea/node.jssudo apt-get updatesudo apt-get install nodejssudo apt install nodejs-legacysudo apt install npmsudo npm config set registry https://registry.npm.taobao.orgsudo npm config listsudo npm install n -gsudo n stablesudo node -v# hexonpm config set user 0npm config set unsafe-perm truesudo npm install -g hexo-cli# hexo-deployer-gitsudo npm install hexo-deployer-git --save# hexo searchnpm install hexo-generator-search --save config hexo hexo theme config 123456789101112131415161718192021# create base pagehexo new page abouthexo new page categorieshexo new page tags# download nextgit clone --single-branch -b master --depth=1 https://github.com/iissnan/hexo-theme-next.git# config file for nexttheme/next/_config.yml# Add local searchlocal_search -&gt; enable: true# Add personal social linkssocial -&gt; GitHub: https://github.com/qinya0 || githubsocial_icons -&gt; enable: truesocial_icons -&gt; GitHub: github# Set copyright declarationcreative_commons: by-nc-sa use hexo12345678910111213# init hexohexo inithexo s (server) open url: http//loclahost:4000vim _config.yml# deploy: # type: git# repository: https://github.com/qinya0/qinya0.github.io.git# branch: masterhexo g (generate )hexo d (deploy )hexo clean]]></content>
       <categories>
-        <category>test</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>test</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[test hexo]]></title>
-    <url>%2F2017%2F10%2F22%2Ftest-hexo%2F</url>
-    <content type="text"><![CDATA[test hexo]]></content>
+    <title><![CDATA[hello hexo]]></title>
+    <url>%2F2017%2F10%2F22%2Fhello-hexo%2F</url>
+    <content type="text"><![CDATA[hello hexo!]]></content>
       <categories>
         <category>test</category>
       </categories>
