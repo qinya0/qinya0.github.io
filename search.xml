@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[mysql-docker]]></title>
+    <url>%2F2017%2F11%2F04%2Fdocker-mysql%2F</url>
+    <content type="text"><![CDATA[docker mysql run mysql in docker, data in machine 12345678910111213141516171819202122232425# ubuntu14.04# docker 1.12.1docker pull mysql:5# a file to save data of mysqlmkdir -p /home/qy/mysql# create container for mysqldocker run -d -p 13306:3306 -v /home/E_xvde3/mysql:/var/lib/mysql\ -e MYSQL_ROOT_PASSWORD=passwd -e MYSQL_DATABASE=qytest \ --name qy-mysql mysql:5# 13306 is open port# qytest is a test datatbase# use mysql# you can only install mysql-clientapt-get updateapt-get install -y mysql-client# config mysql-clientsed -i 's/^bind-address/#bind-address/g' /etc/mysql/my.cnfsed -i 's/^log_error/#log_error/g' /etc/mysql/my.cnf# last you can use mysqlmysql -h 127.0.0.1 -u root -p qytest Dockerfiel for mysql-client 12345FROM ubuntu:14.04# set ENV if you must use agentRUN apt-get update &amp;&amp; apt-get install -y mysql-client \ &amp;&amp; apt-get -y autoremove &amp;&amp; apt-get -y clean build the images 1docker build -t ubuntu:mysql-client . run mysql in a container to connect a mysql-container 12345678910111213# run test containerdocker run -d -ti --link qy-mysql:mysql \ --name qy-mysql-client ubuntu:mysql-client /bin/bash# use mysql in that test containertest_container_id=$(docker ps -a | grep qy-mysql-client | awk '&#123;print $1&#125;')docker exec -ti $test_container_id bash# run shell in test container# get mysql's ip mysql_ip=$(env | grep MYSQL_PORT_3306_TCP_ADDR | awk -F'=' '&#123;print $2&#125;')mysql -h $mysql_ip -u root -p qytest]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[goweb_my-route]]></title>
     <url>%2F2017%2F10%2F28%2Fgoweb-my-route%2F</url>
     <content type="text"><![CDATA[my-routecode1234567891011121314151617181920212223242526272829303132333435363738394041package mainimport ( "fmt" "net/http")// new structtype MyMux struct &#123;&#125;/** * interface : * type Handler interface &#123; * ServeHTTP(ResponseWriter, *Request) * &#125; * HandlerFunc use this interface: * func (f HandlerFunc) ServeHTTP(w ResponseWriter, r *Request) &#123; * f(w, r) * &#125; * */func (p *MyMux) ServeHTTP(w http.ResponseWriter, r *http.Request) &#123; if r.URL.Path == "/" &#123; sayHelloRoute(w, r) return &#125; http.NotFound(w, r) return&#125;// HandlerFuncfunc sayHelloRoute(w http.ResponseWriter, r *http.Request) &#123; fmt.Fprintf(w, "Hello qinya0's route!")&#125;func main() &#123; mux := &amp;MyMux&#123;&#125; http.ListenAndServe(":9000", mux)&#125;]]></content>
